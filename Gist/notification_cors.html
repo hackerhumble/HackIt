@@ -15,7 +15,7 @@ $.ajax({
 	url: 'https://web-api.getgist.com/api/v1/web/projects/tumi3b4l/settings/notifications',
     crossDomain: true,
     //data: '{"message_content":"Hacked!! I am sending the message","message_temp_id":"tumi3b4l-7f4b25ad-c250-fba2-8294-77ce99df894f-15679273027e2"}',
-	data: '{"notification_setting":{"assigned_to_me":{"desktop":"true","mobile":"true","email":"true"},"assigned_to_related_teams":{"desktop":"true","mobile":"true","email":"true"},"unassigned":{"desktop":"true","mobile":"true","email":"true"},"assigned_to_others":{"desktop":"true","mobile":"true","email":"true"},"mentioned":{"desktop":"true","mobile":"true","email":"true"},"global_notification":{"desktop":"true","mobile":"true","email":"true"}}}',
+	data: '{"notification_setting":{"assigned_to_me":{"desktop":"false","mobile":"false","email":"false"},"assigned_to_related_teams":{"desktop":"false","mobile":"false","email":"false"},"unassigned":{"desktop":"false","mobile":"false","email":"false"},"assigned_to_others":{"desktop":"false","mobile":"false","email":"false"},"mentioned":{"desktop":"false","mobile":"false","email":"false"},"global_notification":{"desktop":"false","mobile":"false","email":"false"}}}',
     dataType: 'application/json',
 	xhrFields: { withCredentials: true },		
     success: function(responseData, textStatus, jqXHR) {
