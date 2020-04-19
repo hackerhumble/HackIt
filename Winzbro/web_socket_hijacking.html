@@ -38,13 +38,14 @@
 	  {
 	
 
-	var xhr = new XMLHttpRequest();
-	xhr.open("POST", "https://a2451.winzbro.com:8405", true);
-	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-	xhr.send(evt.data);
+	// var xhr = new XMLHttpRequest();
+	// xhr.open("POST", "https://a2451.winzbro.com:8405", true);
+	// xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+	// xhr.send(evt.data);
 
 
-		websocket.close();
+		// websocket.close();
+		writeToScreen("Received:" + evt.data);
 	  }
 
 	  function onError(evt)
@@ -62,7 +63,7 @@
 	  {
 		var pre = document.createElement("p");
 		pre.style.wordWrap = "break-word";
-		pre.innerHTML = message;
+		pre.innerText = message;
 		output.appendChild(pre);
 	  }
 
