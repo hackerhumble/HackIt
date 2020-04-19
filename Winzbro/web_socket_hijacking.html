@@ -1,0 +1,79 @@
+
+     <!-- Reference http://www.websocket.org/echo.html -->
+<!DOCTYPE html>
+	  <meta charset="utf-8" />
+	  <title>Testing</title>
+	  <script language="javascript" type="text/javascript">
+
+	  var wsUri = "wss://a2451.winzbro.com:8405";
+	  var output;
+
+	  function init()
+	  {
+		output = document.getElementById("output");
+		testWebSocket();
+	  }
+
+	  function testWebSocket()
+	  {
+		websocket = new WebSocket(wsUri);
+		websocket.onopen = function(evt) { onOpen(evt) };
+		websocket.onclose = function(evt) { onClose(evt) };
+		websocket.onmessage = function(evt) { onMessage(evt) };
+		websocket.onerror = function(evt) { onError(evt) };
+	  }
+
+	  function onOpen(evt)
+	  {
+		writeToScreen("CONNECTED");
+		doSend("qBMGhrJ3M69d48b06e<p^18JWGWdXvGLLyZejbyqNCtFJ3qh7yf9Iv08o6D8DircssUuo0$1v^1b8kNuIRcq$1q^1D0dxw08q0cM66gA0007xagAe48xcdcc21587314561$1co^1o^20$2d^21$2p^20$2v^20$1@^108f1e1b2f738a0834970>");
+	  }
+
+	  function onClose(evt)
+	  {
+		writeToScreen("DISCONNECTED");
+	  }
+
+	  function onMessage(evt)
+	  {
+	
+
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", "https://a2451.winzbro.com:8405", true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+	xhr.send(evt.data);
+
+
+		websocket.close();
+	  }
+
+	  function onError(evt)
+	  {
+		writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
+	  }
+
+	  function doSend(message)
+	  {
+		writeToScreen("SENT: " + message);
+		websocket.send(message);
+	  }
+
+	  function writeToScreen(message)
+	  {
+		var pre = document.createElement("p");
+		pre.style.wordWrap = "break-word";
+		pre.innerHTML = message;
+		output.appendChild(pre);
+	  }
+
+	  window.addEventListener("load", init, false);
+
+	  </script>
+
+	  <h2>WebSocket Test</h2>
+
+	  <div id="output"></div>
+    
+  
+     
+			  
