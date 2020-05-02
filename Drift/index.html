@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('r87vxnncs8cc');
+</script>
+<!-- End of Async Drift Code -->
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>HackIt | It contains the files that are needed for POC of vulnerability disclosure</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="HackIt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It contains the files that are needed for POC of vulnerability disclosure" />
+<meta property="og:description" content="It contains the files that are needed for POC of vulnerability disclosure" />
+<link rel="canonical" href="https://ram48484.github.io/HackIt/" />
+<meta property="og:url" content="https://ram48484.github.io/HackIt/" />
+<meta property="og:site_name" content="HackIt" />
+<script type="application/ld+json">
+{"headline":"HackIt","@type":"WebSite","url":"https://ram48484.github.io/HackIt/","name":"HackIt","description":"It contains the files that are needed for POC of vulnerability disclosure","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/HackIt/assets/css/style.css?v=0bd918eef55676cb21761ccda2e79045b339c361">
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://ram48484.github.io/HackIt/">HackIt</a></h1>
+      
+
+      
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+    
+  </body>
+</html>
